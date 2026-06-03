@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temperature Converter Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="intro-section">
+        <p class="eyebrow">Temperature Converter Website</p>
+        <h1>Convert temperatures between Celsius, Fahrenheit, and Kelvin.</h1>
+        <p>
+          Enter a temperature, choose the original unit, choose the unit you want,
+          and press convert. The result will appear with the correct unit.
+        </p>
+      </section>
+
+      <section class="converter-card" aria-label="Temperature converter">
+        <form id="converter-form">
+          <label for="temperature">Temperature</label>
+          <input
+            id="temperature"
+            name="temperature"
+            type="number"
+            step="any"
+            placeholder="Enter temperature"
+            required
+          />
+
+          <div class="unit-grid">
+            <label for="from-unit">
+              From
+              <select id="from-unit" name="from-unit">
+                <option value="celsius">Celsius</option>
+                <option value="fahrenheit">Fahrenheit</option>
+                <option value="kelvin">Kelvin</option>
+              </select>
+            </label>
+
+            <label for="to-unit">
+              To
+              <select id="to-unit" name="to-unit">
+                <option value="fahrenheit">Fahrenheit</option>
+                <option value="celsius">Celsius</option>
+                <option value="kelvin">Kelvin</option>
+              </select>
+            </label>
+          </div>
+
+          <button type="submit">Convert</button>
+        </form>
+
+        <div class="result-box" aria-live="polite">
+          <p class="result-label">Converted Temperature</p>
+          <p id="result">Waiting for input...</p>
+        </div>
+      </section>
+
+      <section class="info-section">
+        <article>
+          <h2>What this project includes</h2>
+          <ul>
+            <li>Input validation for temperature values</li>
+            <li>Dropdown menus for selecting units</li>
+            <li>A convert button that triggers the calculation</li>
+            <li>A result area that displays the converted value and unit</li>
+          </ul>
+        </article>
+        <article>
+          <h2>Conversion formulas</h2>
+          <ul>
+            <li>Celsius to Fahrenheit: C x 9/5 + 32</li>
+            <li>Fahrenheit to Celsius: (F - 32) x 5/9</li>
+            <li>Celsius to Kelvin: C + 273.15</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
